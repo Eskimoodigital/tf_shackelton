@@ -11,6 +11,9 @@ terraform {
   }
 }
 
+
+#define the AWS region
+
 provider "aws" {
     region = "eu-central-1"
 }
@@ -36,6 +39,7 @@ resource "aws_instance" "eskimoo16661" {
 }
 
 
+#define AWS resources
 
 resource "aws_security_group" "instance" {
     name = "terraform-example-instance"
