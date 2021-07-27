@@ -29,8 +29,8 @@ resource "aws_instance" "eskimoo16661" {
 
     user_data = <<-EOF
                 #!/bin/bash
-                echo "Hello, World" > index.html
-                nohup busybox httpd -f -p 8080 &
+                sudo yum install -y httpd
+                sudo systemctl start httpd
                 EOF
   
     tags = {
