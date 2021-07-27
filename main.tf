@@ -25,6 +25,7 @@ resource "aws_instance" "eskimoo16661" {
     ami = "ami-00f22f6155d6d92c5"
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.instance.id]
+    key_name = "KP_ESK_EC2_INST1"
 
     user_data = <<-EOF
                 #!/bin/bash
@@ -33,7 +34,7 @@ resource "aws_instance" "eskimoo16661" {
                 EOF
   
     tags = {
-        Names = "eskimooexample"
+        Name = "eskimooexample"
     }
 
 }
