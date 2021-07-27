@@ -67,3 +67,6 @@ resource "aws_security_group" "instance" {
     }
 } 
 
+output "publicdns" {
+    value = aws_instance.eskimoo16661.public_dns
+}
